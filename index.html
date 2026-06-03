@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Fotoğraf</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>📸 Hatıra Fotoğrafı</h1>
+
+    <img id="photo" src="" alt="Fotoğraf yükleniyor...">
+
+    <button onclick="downloadImage()">⬇️ İndir</button>
+
+  </div>
+
+  <script>
+    // BURAYA WINFORMS’TAN GELEN URL GELECEK
+    const imageUrl = "https://YOUR-IMAGE-URL.jpg";
+
+    const img = document.getElementById("photo");
+    img.src = imageUrl;
+
+    function downloadImage() {
+      const a = document.createElement("a");
+      a.href = imageUrl;
+      a.download = "hatira.jpg";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+
+</body>
+</html>
