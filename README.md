@@ -1,1 +1,0 @@
-# konyamtalfuar-bilisim
